@@ -2,60 +2,65 @@
 ::  run_nrtest.cmd - Runs numerical regression test
 ::
 ::  Date Created: 1/8/2018
+::  Date Updated: 7/16/2018
 ::
 ::  Author: Michael E. Tryby
 ::          US EPA - ORD/NRMRL
 ::
 ::  Arguments:
-::    1 - (REF build identifier)
+::    1 - (SUT version identifier)
 ::    2 - (SUT build identifier)
-::    3 - (test suite path)
-::    3 - (build identifier for software under test)
-::    4 - (version identifier for software under test)
-::    4 - (relative path regression test file staging location)
 ::
 
 @echo off
-setlocal
+setlocal EnableDelayedExpansion
 
 set "SCRIPT_HOME=%~dp0"
 
-:: Check existence and apply default arguments
-IF [%1]==[] ( echo "ERROR: REF_BUILD_ID must be defined" & exit /B 1
-) ELSE ( set "REF_BUILD_ID=%~1" )
+:: Check existence
+IF NOT DEFINED REF_BUILD_ID (echo "ERROR: REF_BUILD_ID must be defined" & exit /B 1)
+
+IF [%1]==[] (set SUT_VERSION=
+) ELSE ( set "SUT_VERSION=%~1" )
 
 IF [%2]==[] ( set "SUT_BUILD_ID=local"
 ) ELSE ( set "SUT_BUILD_ID=%~2" )
-
-IF [%4]==[] (set SUT_VERSION=
-) ELSE ( set "SUT_VERSION=%~4" )
-
-IF [%3]==[] ( set "TEST_SUITE_PATH=nrtestsuite"
-) ELSE ( set "TEST_SUITE_PATH=%~3" )
 
 
 :: determine location of python Scripts folder
 FOR /F "tokens=*" %%G IN ('where python') DO (
   set PYTHON_DIR=%%~dpG
+  GOTO break_loop_1
 )
+:break_loop_1
 set "NRTEST_SCRIPT_PATH=%PYTHON_DIR%Scripts"
 
 
+IF NOT EXIST "apps\epanet-%SUT_BUILD_ID%.json" DO (
+  :: determine SUT executable path
+  FOR /D /R "%BUILD_HOME%" %%a IN (*) DO (
+    IF /i "%%~nxa"=="bin" (
+      set "BIN_HOME=%%a"
+      GOTO break_loop_2
+    )
+  )
+  :break_loop_2
+  set "SUT_PATH=%BIN_HOME%\Release"
 
-:: determine SUT executable path
-:: TODO: This may fail when there is more than one cmake buildprod folder
-FOR /D /R "%SCRIPT_HOME%..\" %%a IN (*) DO IF /i "%%~nxa"=="bin" set "BUILD_HOME=%%a"
-set "SUT_PATH=%BUILD_HOME%\Release"
+  :: generate json configuration file for software under test
+  mkdir apps
+  CALL %SCRIPT_HOME%\app-config.cmd %SUT_PATH% %PLATFORM% %SUT_BUILD_ID% %SUT_VERSION%^
+     > apps\epanet-%SUT_BUILD_ID%.json
+)
 
-:: generate json configuration file for software under test
-mkdir apps
-%SCRIPT_HOME%\gen-config.cmd %SUT_PATH% %PLATFORM% %SUT_BUILD_ID% %SUT_VERSION% > apps\epanet-%SUT_BUILD_ID%.json
 
+:: build test list
+set TESTS=
+FOR /F "tokens=*" %%T IN ('dir /b tests') DO ( set "TESTS=!TESTS! tests\%%T" )
 
 
 set NRTEST_EXECUTE_CMD=python %NRTEST_SCRIPT_PATH%\nrtest execute
 set TEST_APP_PATH=apps\epanet-%SUT_BUILD_ID%.json
-set TESTS=tests\examples tests\exeter tests\large tests\network_one tests\press_depend tests\small tests\tanks tests\valves
 set TEST_OUTPUT_PATH=benchmark\epanet-%SUT_BUILD_ID%
 
 set NRTEST_COMPARE_CMD=python %NRTEST_SCRIPT_PATH%\nrtest compare
@@ -64,7 +69,7 @@ set RTOL_VALUE=0.01
 set ATOL_VALUE=0.0
 
 :: change current directory to test suite
-cd %TEST_SUITE_PATH%
+cd %TEST_HOME%
 
 :: if present clean test benchmark results
 if exist %TEST_OUTPUT_PATH% (
