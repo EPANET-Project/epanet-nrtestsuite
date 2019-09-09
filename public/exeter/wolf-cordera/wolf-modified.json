@@ -1,0 +1,17 @@
+{
+    "name": "wolf-modified",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "wolf-modified.inp",
+        "wolf-modified.rpt",
+        "wolf-modified.out"
+    ],
+    "input_files": [
+        "wolf-modified.inp"
+    ],
+    "output_files": {
+        "wolf-modified.rpt": "epanet report",
+        "wolf-modified.out": "epanet allclose"
+    }
+}

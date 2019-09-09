@@ -1,0 +1,17 @@
+{
+    "name": "exnet",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "exnet.inp",
+        "exnet.rpt",
+        "exnet.out"
+    ],
+    "input_files": [
+        "exnet.inp"
+    ],
+    "output_files": {
+        "exnet.rpt": "epanet report",
+        "exnet.out": "epanet allclose"
+    }
+}

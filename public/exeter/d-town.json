@@ -1,0 +1,17 @@
+{
+    "name": "d-town",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "d-town.inp",
+        "d-town.rpt",
+        "d-town.out"
+    ],
+    "input_files": [
+        "d-town.inp"
+    ],
+    "output_files": {
+        "d-town.rpt": "epanet report",
+        "d-town.out": "epanet allclose"
+    }
+}

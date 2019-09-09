@@ -1,0 +1,17 @@
+{
+    "name": "pescara",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "pescara.inp",
+        "pescara.rpt",
+        "pescara.out"
+    ],
+    "input_files": [
+        "pescara.inp"
+    ],
+    "output_files": {
+        "pescara.rpt": "epanet report",
+        "pescara.out": "epanet allclose"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "blacksburg",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "blacksburg.inp",
+        "blacksburg.rpt",
+        "blacksburg.out"
+    ],
+    "input_files": [
+        "blacksburg.inp"
+    ],
+    "output_files": {
+        "blacksburg.rpt": "epanet report",
+        "blacksburg.out": "epanet allclose"
+    }
+}

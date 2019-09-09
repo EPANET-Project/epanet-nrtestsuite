@@ -1,0 +1,17 @@
+{
+    "name": "nytun",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "nytun.inp",
+        "nytun.rpt",
+        "nytun.out"
+    ],
+    "input_files": [
+        "nytun.inp"
+    ],
+    "output_files": {
+        "nytun.rpt": "epanet report",
+        "nytun.out": "epanet allclose"
+    }
+}

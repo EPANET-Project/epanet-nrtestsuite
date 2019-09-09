@@ -1,0 +1,17 @@
+{
+    "name": "bocika",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "bocika.inp",
+        "bocika.rpt",
+        "bocika.out"
+    ],
+    "input_files": [
+        "bocika.inp"
+    ],
+    "output_files": {
+        "bocika.rpt": "epanet report",
+        "bocika.out": "epanet allclose"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "goyang",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "goyang.inp",
+        "goyang.rpt",
+        "goyang.out"
+    ],
+    "input_files": [
+        "goyang.inp"
+    ],
+    "output_files": {
+        "goyang.rpt": "epanet report",
+        "goyang.out": "epanet allclose"
+    }
+}

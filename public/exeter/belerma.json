@@ -1,0 +1,17 @@
+{
+    "name": "belerma",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "belerma.inp",
+        "belerma.rpt",
+        "belerma.out"
+    ],
+    "input_files": [
+        "belerma.inp"
+    ],
+    "output_files": {
+        "belerma.rpt": "epanet report",
+        "belerma.out": "epanet allclose"
+    }
+}

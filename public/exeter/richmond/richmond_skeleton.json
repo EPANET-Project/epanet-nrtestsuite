@@ -1,0 +1,17 @@
+{
+    "name": "richmond_skeleton",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "richmond_skeleton.inp",
+        "richmond_skeleton.rpt",
+        "richmond_skeleton.out"
+    ],
+    "input_files": [
+        "richmond_skeleton.inp"
+    ],
+    "output_files": {
+        "richmond_skeleton.rpt": "epanet report",
+        "richmond_skeleton.out": "epanet allclose"
+    }
+}

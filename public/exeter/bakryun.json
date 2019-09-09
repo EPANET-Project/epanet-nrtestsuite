@@ -1,0 +1,17 @@
+{
+    "name": "bakryun",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "bakryun.inp",
+        "bakryun.rpt",
+        "bakryun.out"
+    ],
+    "input_files": [
+        "bakryun.inp"
+    ],
+    "output_files": {
+        "bakryun.rpt": "epanet report",
+        "bakryun.out": "epanet allclose"
+    }
+}

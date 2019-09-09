@@ -1,0 +1,17 @@
+{
+    "name": "modena",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "modena.inp",
+        "modena.rpt",
+        "modena.out"
+    ],
+    "input_files": [
+        "modena.inp"
+    ],
+    "output_files": {
+        "modena.rpt": "epanet report",
+        "modena.out": "epanet allclose"
+    }
+}

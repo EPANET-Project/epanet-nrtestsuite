@@ -1,0 +1,17 @@
+{
+    "name": "fossolo",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "fossolo.inp",
+        "fossolo.rpt",
+        "fossolo.out"
+    ],
+    "input_files": [
+        "fossolo.inp"
+    ],
+    "output_files": {
+        "fossolo.rpt": "epanet report",
+        "fossolo.out": "epanet allclose"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "richmond_standard",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "richmond_standard.inp",
+        "richmond_standard.rpt",
+        "richmond_standard.out"
+    ],
+    "input_files": [
+        "richmond_standard.inp"
+    ],
+    "output_files": {
+        "richmond_standard.rpt": "epanet report",
+        "richmond_standard.out": "epanet allclose"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "wolf-initial",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "wolf-initial.inp",
+        "wolf-initial.rpt",
+        "wolf-initial.out"
+    ],
+    "input_files": [
+        "wolf-initial.inp"
+    ],
+    "output_files": {
+        "wolf-initial.rpt": "epanet report",
+        "wolf-initial.out": "epanet allclose"
+    }
+}

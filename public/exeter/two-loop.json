@@ -1,0 +1,17 @@
+{
+    "name": "two-loop",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "two-loop.inp",
+        "two-loop.rpt",
+        "two-loop.out"
+    ],
+    "input_files": [
+        "two-loop.inp"
+    ],
+    "output_files": {
+        "two-loop.rpt": "epanet report",
+        "two-loop.out": "epanet allclose"
+    }
+}

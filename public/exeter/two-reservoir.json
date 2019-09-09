@@ -1,0 +1,17 @@
+{
+    "name": "two-reservoir",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "two-reservoir.inp",
+        "two-reservoir.rpt",
+        "two-reservoir.out"
+    ],
+    "input_files": [
+        "two-reservoir.inp"
+    ],
+    "output_files": {
+        "two-reservoir.rpt": "epanet report",
+        "two-reservoir.out": "epanet allclose"
+    }
+}
