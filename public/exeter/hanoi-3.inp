@@ -2,7 +2,7 @@
 Hanoi example by Fujiwara and Khang, Water Resources Research, 1990
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  2               	0           	890         	                	;
  3               	0           	850         	                	;
  4               	0           	130         	                	;
@@ -36,7 +36,7 @@ Hanoi example by Fujiwara and Khang, Water Resources Research, 1990
  32              	0           	805         	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  1               	100.0       	                	;
 
 [TANKS]
@@ -44,7 +44,7 @@ Hanoi example by Fujiwara and Khang, Water Resources Research, 1990
 
 [PIPES]
 ;ID              	Node1           	Node2           	Length      	Diameter    	Roughness   	MinorLoss   	Status
- 1               	1               	2               	100         	800         	130         	0           	open  	;	
+ 1               	1               	2               	100         	800         	130         	0           	open  	;
  2               	2               	3               	1350        	800         	130         	0           	open  	;
  3               	3               	4               	900         	800         	130         	0           	open  	;
  4               	4               	5               	1150        	800         	130         	0           	open  	;
@@ -77,13 +77,13 @@ Hanoi example by Fujiwara and Khang, Water Resources Research, 1990
  31              	29              	30              	1600        	800         	130         	0           	open  	;
  32              	30              	31              	150         	800         	130         	0           	open  	;
  33              	32              	31              	860         	800         	130         	0           	open  	;
- 34              	25              	32              	950         	800         	130         	0           	open  	; 
+ 34              	25              	32              	950         	800         	130         	0           	open  	;
 
 [PUMPS]
 ;ID              	Node1           	Node2           	Parameters
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
 
 [TAGS]
 
@@ -136,20 +136,21 @@ Hanoi example by Fujiwara and Khang, Water Resources Research, 1990
 ;Tank            	Model
 
 [TIMES]
- Duration           	0:00 
- Hydraulic Timestep 	1:00 
- Quality Timestep   	0:05 
- Pattern Timestep   	1:00 
- Pattern Start      	0:00 
- Report Timestep    	1:00 
- Report Start       	0:00 
+ Duration           	0:00
+ Hydraulic Timestep 	1:00
+ Quality Timestep   	0:05
+ Pattern Timestep   	1:00
+ Pattern Start      	0:00
+ Report Timestep    	1:00
+ Report Start       	0:00
  Start ClockTime    	12 am
  Statistic          	NONE
 
 [REPORT]
- Status             	No
+ Status             	Yes
  Summary            	No
- Page               	0
+ Nodes                  None
+ Links                  None
 
 [OPTIONS]
  Units               	CMH
@@ -175,38 +176,38 @@ Hanoi example by Fujiwara and Khang, Water Resources Research, 1990
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- 2               	5021.20         	1582.17         
- 3               	5025.20         	2585.42         
- 4               	5874.22         	2588.30         
- 5               	6873.11         	2588.30         
- 6               	8103.51         	2585.42         
- 7               	8103.51         	3234.67         
- 8               	8106.66         	4179.28         
- 9               	8106.66         	5133.78         
- 10              	7318.64         	5133.78         
- 11              	7319.94         	5831.65         
- 12              	7319.94         	6671.19         
- 13              	5636.76         	6676.24         
- 14              	6530.63         	5133.78         
- 15              	5676.02         	5133.78         
- 16              	5021.20         	5133.78         
- 17              	5021.20         	4412.36         
- 18              	5021.20         	3868.52         
- 19              	5021.20         	3191.49         
- 20              	3587.87         	2588.30         
- 21              	3587.87         	1300.84         
- 22              	3587.87         	901.29          
- 23              	1978.55         	2588.30         
- 24              	1975.58         	4084.35         
- 25              	1980.46         	5137.63         
- 26              	3077.46         	5137.63         
- 27              	3933.52         	5133.78         
- 28              	846.04          	2588.20         
- 29              	-552.41         	2588.20         
- 30              	-552.38         	4369.06         
- 31              	-549.36         	5137.63         
- 32              	536.45          	5137.63         
- 1               	5360.71         	1354.05         
+ 2               	5021.20         	1582.17
+ 3               	5025.20         	2585.42
+ 4               	5874.22         	2588.30
+ 5               	6873.11         	2588.30
+ 6               	8103.51         	2585.42
+ 7               	8103.51         	3234.67
+ 8               	8106.66         	4179.28
+ 9               	8106.66         	5133.78
+ 10              	7318.64         	5133.78
+ 11              	7319.94         	5831.65
+ 12              	7319.94         	6671.19
+ 13              	5636.76         	6676.24
+ 14              	6530.63         	5133.78
+ 15              	5676.02         	5133.78
+ 16              	5021.20         	5133.78
+ 17              	5021.20         	4412.36
+ 18              	5021.20         	3868.52
+ 19              	5021.20         	3191.49
+ 20              	3587.87         	2588.30
+ 21              	3587.87         	1300.84
+ 22              	3587.87         	901.29
+ 23              	1978.55         	2588.30
+ 24              	1975.58         	4084.35
+ 25              	1980.46         	5137.63
+ 26              	3077.46         	5137.63
+ 27              	3933.52         	5133.78
+ 28              	846.04          	2588.20
+ 29              	-552.41         	2588.20
+ 30              	-552.38         	4369.06
+ 31              	-549.36         	5137.63
+ 32              	536.45          	5137.63
+ 1               	5360.71         	1354.05
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -215,9 +216,9 @@ Hanoi example by Fujiwara and Khang, Water Resources Research, 1990
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	-985.92         	612.54          	8551.27         	6964.99         
+ DIMENSIONS     	-985.92         	612.54          	8551.27         	6964.99
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

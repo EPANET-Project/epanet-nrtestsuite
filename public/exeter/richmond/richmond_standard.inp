@@ -3137,7 +3137,7 @@ LINK v1E CLOSED IF NODE E ABOVE 2.65
  Statistic          	NONE
 
 [REPORT]
- Status             	No
+ Status             	FULL
  Summary            	No
  Page               	0
 

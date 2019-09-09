@@ -83,6 +83,13 @@ EPANET Example (Goyang in Original)
 [OPTIONS]
 units si
 headloss h-w
+
+[REPORT]
+ Status             	Yes
+ Summary            	No
+ Nodes                  None
+ Links                  None
+
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
  2               	-533.90         	5474.58

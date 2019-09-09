@@ -94,9 +94,10 @@
  Statistic          	None
 
 [REPORT]
- Status             	No
+ Status             	Yes
  Summary            	No
- Page               	0
+ Nodes                  None
+ Links                  None
 
 [OPTIONS]
  Units              	CMH

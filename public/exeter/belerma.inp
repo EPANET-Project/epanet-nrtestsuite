@@ -994,9 +994,10 @@
  Statistic          	NONE
 
 [REPORT]
- Status             	No
+ Status             	Yes
  Summary            	No
- Page               	0
+ Nodes                  None
+ Links                  None
 
 [OPTIONS]
  Units              	LPS

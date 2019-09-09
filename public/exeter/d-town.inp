@@ -1590,9 +1590,10 @@ LINK PU9 1.0000 IF NODE T5 BELOW 0.5000
  Statistic          	NONE
 
 [REPORT]
- Status             	No
+ Status             	Yes
  Summary            	No
- Page               	0
+ Nodes                  None
+ Links                  None
 
 [OPTIONS]
  Units              	LPS

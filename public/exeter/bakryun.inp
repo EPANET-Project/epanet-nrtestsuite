@@ -119,6 +119,12 @@
 units si
 headloss h-w
 
+[REPORT]
+ Status             	Yes
+ Summary            	No
+ Nodes                  None
+ Links                  None
+
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
  1               	-2260.03        	6736.47

@@ -657,9 +657,10 @@ modena -- Bragalli, D'Ambrosio, Lee, Lodi, Toth (2008)
  Statistic          	NONE
 
 [REPORT]
- Status           	Yes
- Summary        	No
- Page		   	0
+ Status             	Yes
+ Summary            	No
+ Nodes                  None
+ Links                  None
 
 [REPORT]
  Status             	Yes

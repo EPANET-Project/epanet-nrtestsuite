@@ -21,6 +21,7 @@
 
   4. Add new test artifacts to the benchmark archive.
 
+  5. Update the release with the new benchmark archive.
 
 
 ### Updating Rolling Benchmark

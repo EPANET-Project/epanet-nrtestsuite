@@ -2,7 +2,7 @@
 ANYTOWN example
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  1               	20          	500         	1               	;
  2               	50          	200         	1               	;
  3               	50          	200         	1               	;
@@ -27,7 +27,7 @@ ANYTOWN example
  22              	120         	0           	1               	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  40              	10          	                	;
 
 [TANKS]
@@ -88,7 +88,7 @@ ANYTOWN example
  80              	40              	20              	HEAD 2	;
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
 
 [TAGS]
 
@@ -101,40 +101,40 @@ ANYTOWN example
 [PATTERNS]
 ;ID              	Multipliers
 ;Daily water use pattern
- 1               	1.0         	1.0         	1.0         	0.9         	0.9         	0.9         
- 1               	0.7         	0.7         	0.7         	0.6         	0.6         	0.6         
- 1               	1.2         	1.2         	1.2         	1.3         	1.3         	1.3         
- 1               	1.2         	1.2         	1.2         	1.1         	1.1         	1.1         
+ 1               	1.0         	1.0         	1.0         	0.9         	0.9         	0.9
+ 1               	0.7         	0.7         	0.7         	0.6         	0.6         	0.6
+ 1               	1.2         	1.2         	1.2         	1.3         	1.3         	1.3
+ 1               	1.2         	1.2         	1.2         	1.1         	1.1         	1.1
 ;Daily Operating Pump
- 2               	0           	0           	0           	0           	0           	0           
- 2               	0           	0           	0           	0           	0           	0           
- 2               	0           	0           	0           	0           	0           	0           
- 2               	0           	0           	0           	0           	0           	0           
+ 2               	0           	0           	0           	0           	0           	0
+ 2               	0           	0           	0           	0           	0           	0
+ 2               	0           	0           	0           	0           	0           	0
+ 2               	0           	0           	0           	0           	0           	0
 ;Daily Alternate Pump
- 3               	0           	0           	0           	0           	0           	0           
- 3               	0           	0           	0           	0           	0           	0           
- 3               	0           	0           	0           	0           	0           	0           
- 3               	0           	0           	0           	0           	0           	0           
+ 3               	0           	0           	0           	0           	0           	0
+ 3               	0           	0           	0           	0           	0           	0
+ 3               	0           	0           	0           	0           	0           	0
+ 3               	0           	0           	0           	0           	0           	0
 ;Daily Alternate Pump
- 4               	0           	0           	0           	0           	0           	0           
- 4               	0           	0           	0           	0           	0           	0           
- 4               	0           	0           	0           	0           	0           	0           
- 4               	0           	0           	0           	0           	0           	0           
+ 4               	0           	0           	0           	0           	0           	0
+ 4               	0           	0           	0           	0           	0           	0
+ 4               	0           	0           	0           	0           	0           	0
+ 4               	0           	0           	0           	0           	0           	0
 
 [CURVES]
 ;ID              	X-Value     	Y-Value
 ;PUMP: PUMP: ID              	X-Value     	Y-Value
- 2               	0.          	300         
- 2               	2000        	292         
- 2               	4000        	270         
- 2               	6000        	230         
- 2               	8000        	181         
+ 2               	0.          	300
+ 2               	2000        	292
+ 2               	4000        	270
+ 2               	6000        	230
+ 2               	8000        	181
 ;PUMP: PUMP: ID			flow		efficiency
- E1              	0.          	0           
- E1              	2000        	50          
- E1              	4000        	65          
- E1              	6000        	55          
- E1              	8000        	40          
+ E1              	0.          	0
+ E1              	2000        	50
+ E1              	4000        	65
+ E1              	6000        	55
+ E1              	8000        	40
 
 [CONTROLS]
 
@@ -176,20 +176,21 @@ ANYTOWN example
 ;Tank            	Model
 
 [TIMES]
- Duration           	0:00 
- Hydraulic Timestep 	0:01 
- Quality Timestep   	0:01 
- Pattern Timestep   	1:00 
- Pattern Start      	0:00 
- Report Timestep    	1:00 
- Report Start       	0:00 
+ Duration           	0:00
+ Hydraulic Timestep 	0:01
+ Quality Timestep   	0:01
+ Pattern Timestep   	1:00
+ Pattern Start      	0:00
+ Report Timestep    	1:00
+ Report Start       	0:00
  Start ClockTime    	0
  Statistic          	NONE
 
 [REPORT]
- Status             	Full
+ Status             	Yes
  Summary            	No
- Page               	0
+ Nodes                  None
+ Links                  None
 
 [OPTIONS]
  Units              	GPM
@@ -208,10 +209,10 @@ ANYTOWN example
  Quality            	NONE mg/L
  Diffusivity        	1.0
  Tolerance          	0.01
- 
+
  ;Head Accuracy         	0.001
  ;Flow Accuracy          0.45
- ;Step Sizing            LINESEARCH ;HEURISTIC ;FULL ;  
+ ;Step Sizing            LINESEARCH ;HEURISTIC ;FULL ;
  ;Demand Model           LOGISTIC ;FIXED ; ORIFICE ;  PRESSURE_DEFICIENT  ;
  ;Minimum Pressure       0
  ;Full Pressure          40
@@ -219,31 +220,31 @@ ANYTOWN example
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- 1               	7682.33         	3371.15         
- 2               	7633.71         	5737.44         
- 3               	7520.26         	7293.35         
- 4               	6175.04         	7568.88         
- 5               	5591.57         	8460.29         
- 6               	4100.49         	8071.31         
- 7               	3192.87         	7763.37         
- 8               	3321.19         	6696.55         
- 9               	1305.62         	4850.97         
- 10              	2317.45         	3588.20         
- 11              	3701.63         	2892.06         
- 12              	4846.03         	3354.94         
- 13              	6450.57         	4424.64         
- 14              	6466.77         	5769.85         
- 15              	5094.45         	6482.09         
- 16              	4017.86         	5615.96         
- 17              	3005.49         	4292.43         
- 18              	4846.03         	4440.84         
- 19              	5332.25         	5332.25         
- 20              	8306.86         	3369.33         
- 21              	6094.00         	6499.19         
- 22              	2422.68         	4519.09         
- 40              	8700.60         	3371.15         
- 41              	6094.00         	6600.19         
- 42              	2422.68         	4700.09         
+ 1               	7682.33         	3371.15
+ 2               	7633.71         	5737.44
+ 3               	7520.26         	7293.35
+ 4               	6175.04         	7568.88
+ 5               	5591.57         	8460.29
+ 6               	4100.49         	8071.31
+ 7               	3192.87         	7763.37
+ 8               	3321.19         	6696.55
+ 9               	1305.62         	4850.97
+ 10              	2317.45         	3588.20
+ 11              	3701.63         	2892.06
+ 12              	4846.03         	3354.94
+ 13              	6450.57         	4424.64
+ 14              	6466.77         	5769.85
+ 15              	5094.45         	6482.09
+ 16              	4017.86         	5615.96
+ 17              	3005.49         	4292.43
+ 18              	4846.03         	4440.84
+ 19              	5332.25         	5332.25
+ 20              	8306.86         	3369.33
+ 21              	6094.00         	6499.19
+ 22              	2422.68         	4519.09
+ 40              	8700.60         	3371.15
+ 41              	6094.00         	6600.19
+ 42              	2422.68         	4700.09
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -252,9 +253,9 @@ ANYTOWN example
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	935.87          	2613.65         	9070.35         	8738.70         
+ DIMENSIONS     	935.87          	2613.65         	9070.35         	8738.70
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

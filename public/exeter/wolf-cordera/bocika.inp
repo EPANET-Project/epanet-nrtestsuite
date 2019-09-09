@@ -4723,9 +4723,10 @@ LINK 80146       OPEN AT TIME    37.0000
  REPORT START           0.00000
 
 [REPORT]
- Status             	No
+ Status             	Yes
  Summary            	No
- Page               	0
+ Nodes                  None
+ Links                  None
 
 [OPTIONS]
  UNITS      GPM

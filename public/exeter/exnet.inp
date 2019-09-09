@@ -5008,9 +5008,10 @@ dup3664	170	197	280	0.0001	0.0001	0	CLOSED	;
  Statistic          	NONE
 
 [REPORT]
- Status             	No
+ Status             	Yes
  Summary            	No
- Page               	0
+ Nodes                  None
+ Links                  None
 
 [OPTIONS]
  Units              	LPS
