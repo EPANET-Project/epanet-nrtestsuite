@@ -2,13 +2,23 @@
    Testing.md
 
    Created: Sept 6, 2019
-   Updated: Later
+   Updated: Sept 9, 2019
 
    Author: Michael E. Tryby
            US EPA - ORD/NRMRL
 --->
 
 ## Regression Testing SOPs
+
+
+**Recommended setting for [REPORTS] section when adding new tests**
+```
+[REPORT]
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
+```
 
 
 ### Adding Tests
