@@ -1,10 +1,10 @@
 [TITLE]
  EPANET Example Network 1
 A simple example of modeling chlorine decay. Both bulk and
-wall reactions are included. 
+wall reactions are included.
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  10              	710         	0           	                	;
  11              	710         	150         	                	;
  12              	700         	150         	                	;
@@ -16,7 +16,7 @@ wall reactions are included.
  32              	710         	100         	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  9               	800         	                	;
 
 [TANKS]
@@ -43,7 +43,7 @@ wall reactions are included.
  9               	9               	10              	HEAD 1	SPEED 1	;
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
 
 [TAGS]
 
@@ -57,13 +57,13 @@ wall reactions are included.
 [PATTERNS]
 ;ID              	Multipliers
 ;Demand Pattern
- 1               	1.0         	1.2         	1.4         	1.6         	1.4         	1.2         
- 1               	1.0         	0.8         	0.6         	0.4         	0.6         	0.8         
+ 1               	1.0         	1.2         	1.4         	1.6         	1.4         	1.2
+ 1               	1.0         	0.8         	0.6         	0.4         	0.6         	0.8
 
 [CURVES]
 ;ID              	X-Value     	Y-Value
 ;PUMP: PUMP: Pump Curve for Pump 9
- 1               	1500        	250         
+ 1               	1500        	250
 
 [CONTROLS]
  ;LINK 9 OPEN IF NODE 2 BELOW 110
@@ -98,7 +98,7 @@ wall reactions are included.
 
 [SOURCES]
 ;Node            	Type        	Quality     	Pattern
- 9                  CONCEN          1.5 
+ 9                  CONCEN          1.5
 
 [REACTIONS]
 ;Type     	Pipe/Tank       	Coefficient
@@ -115,23 +115,24 @@ wall reactions are included.
 
 [MIXING]
 ;Tank            	Model
- 2                  2COMP      0.2      
+ 2                  2COMP      0.2
 
 [TIMES]
- Duration           	0:00 
- Hydraulic Timestep 	1:00 
- Quality Timestep   	0:05 
- Pattern Timestep   	2:00 
- Pattern Start      	0:00 
- Report Timestep    	1:00 
- Report Start       	0:00 
+ Duration           	0:00
+ Hydraulic Timestep 	1:00
+ Quality Timestep   	0:05
+ Pattern Timestep   	2:00
+ Pattern Start      	0:00
+ Report Timestep    	1:00
+ Report Start       	0:00
  Start ClockTime    	12 am
  Statistic          	NONE
 
 [REPORT]
- Status             	Full
- Summary            	No
- Page               	0
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
 
 [OPTIONS]
  Units              	GPM
@@ -153,31 +154,31 @@ wall reactions are included.
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- 10              	20.00           	70.00           
- 11              	30.00           	70.00           
- 12              	50.00           	70.00           
- 13              	70.00           	70.00           
- 21              	30.00           	40.00           
- 22              	50.00           	40.00           
- 23              	70.00           	40.00           
- 31              	30.00           	10.00           
- 32              	50.00           	10.00           
- 9               	10.00           	70.00           
- 2               	50.00           	90.00           
+ 10              	20.00           	70.00
+ 11              	30.00           	70.00
+ 12              	50.00           	70.00
+ 13              	70.00           	70.00
+ 21              	30.00           	40.00
+ 22              	50.00           	40.00
+ 23              	70.00           	40.00
+ 31              	30.00           	10.00
+ 32              	50.00           	10.00
+ 9               	10.00           	70.00
+ 2               	50.00           	90.00
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
 
 [LABELS]
 ;X-Coord           Y-Coord          Label & Anchor Node
- 6.99             73.63            "Source"                 
- 13.48            68.13            "Pump"                 
- 43.85            91.21            "Tank"                 
+ 6.99             73.63            "Source"
+ 13.48            68.13            "Pump"
+ 43.85            91.21            "Tank"
 
 [BACKDROP]
- DIMENSIONS     	7.00            	6.00            	73.00           	94.00           
+ DIMENSIONS     	7.00            	6.00            	73.00           	94.00
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

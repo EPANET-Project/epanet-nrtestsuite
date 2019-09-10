@@ -2,7 +2,7 @@
 
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  TreatmentPlant  	0           	0           	                	;
  Montgomery      	0           	80          	                	;
  Tennessee       	0           	250         	                	;
@@ -11,7 +11,7 @@
  Vine            	0           	50          	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  Resr            	100         	                	;
 
 [TANKS]
@@ -32,7 +32,7 @@
 ;ID              	Node1           	Node2           	Parameters
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
 
 [TAGS]
 
@@ -45,8 +45,8 @@
 [PATTERNS]
 ;ID              	Multipliers
 ;
- stepdemand      	1           	1           	1           	1           	1           	1           
- stepdemand      	0           	0           	0           	0           	0           	0           
+ stepdemand      	1           	1           	1           	1           	1           	1
+ stepdemand      	0           	0           	0           	0           	0           	0
 
 [CURVES]
 ;ID              	X-Value     	Y-Value
@@ -91,20 +91,21 @@
 ;Tank            	Model
 
 [TIMES]
- Duration           	24:00 
- Hydraulic Timestep 	0:10 
- Quality Timestep   	0:01 
- Pattern Timestep   	1:00 
- Pattern Start      	0:00 
- Report Timestep    	1:00 
- Report Start       	0:00 
+ Duration           	24:00
+ Hydraulic Timestep 	0:10
+ Quality Timestep   	0:01
+ Pattern Timestep   	1:00
+ Pattern Start      	0:00
+ Report Timestep    	1:00
+ Report Start       	0:00
  Start ClockTime    	12 am
  Statistic          	NONE
 
 [REPORT]
- Status             	No
- Summary            	No
- Page               	0
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
 
 [OPTIONS]
  Units              	GPM
@@ -126,14 +127,14 @@
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- TreatmentPlant  	-1075.95        	6943.94         
- Montgomery      	1273.73         	6946.20         
- Tennessee       	3204.11         	6946.20         
- Reading         	6352.85         	6946.20         
- Mills           	10226.04        	6943.94         
- Vine            	6356.24         	5063.29         
- Resr            	-2414.20        	6923.08         
- NewportTank     	3209.76         	8318.26         
+ TreatmentPlant  	-1075.95        	6943.94
+ Montgomery      	1273.73         	6946.20
+ Tennessee       	3204.11         	6946.20
+ Reading         	6352.85         	6946.20
+ Mills           	10226.04        	6943.94
+ Vine            	6356.24         	5063.29
+ Resr            	-2414.20        	6923.08
+ NewportTank     	3209.76         	8318.26
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -142,9 +143,9 @@
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00
  UNITS          	Meters
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

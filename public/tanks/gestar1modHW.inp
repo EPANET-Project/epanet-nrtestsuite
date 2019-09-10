@@ -2,11 +2,11 @@
 
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  C               	0           	2.7         	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  B               	10          	                	;
  A               	10          	                	;
 
@@ -22,7 +22,7 @@
 ;ID              	Node1           	Node2           	Parameters
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
 
 [TAGS]
 
@@ -75,20 +75,21 @@
 ;Tank            	Model
 
 [TIMES]
- Duration           	0:00 
- Hydraulic Timestep 	1:00 
- Quality Timestep   	0:05 
- Pattern Timestep   	1:00 
- Pattern Start      	0:00 
- Report Timestep    	1:00 
- Report Start       	0:00 
+ Duration           	0:00
+ Hydraulic Timestep 	1:00
+ Quality Timestep   	0:05
+ Pattern Timestep   	1:00
+ Pattern Start      	0:00
+ Report Timestep    	1:00
+ Report Start       	0:00
  Start ClockTime    	12 am
  Statistic          	NONE
 
 [REPORT]
- Status             	Full
- Summary            	No
- Page               	0
+Status             Yes
+Summary            No
+Nodes              None
+Links              None
 
 [OPTIONS]
  Units              	LPS
@@ -110,9 +111,9 @@
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- C               	6325.00         	6400.00         
- B               	8171.36         	8260.87         
- A               	4458.33         	8266.67         
+ C               	6325.00         	6400.00
+ B               	8171.36         	8260.87
+ A               	4458.33         	8266.67
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -121,9 +122,9 @@
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

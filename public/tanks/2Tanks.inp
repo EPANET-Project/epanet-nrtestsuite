@@ -2,11 +2,11 @@
 
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  2               	0           	5           	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  1               	5           	                	;
  3               	4.8         	                	;
 
@@ -22,7 +22,7 @@
 ;ID              	Node1           	Node2           	Parameters
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
 
 [TAGS]
 
@@ -84,9 +84,10 @@
  Statistic          	None
 
 [REPORT]
- Status             	No
- Summary            	No
- Page               	0
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
 
 [OPTIONS]
  Units              	GPM
@@ -108,9 +109,9 @@
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- 2               	2544.76         	6342.71         
- 1               	2544.76         	8081.84         
- 3               	5869.57         	8081.84         
+ 2               	2544.76         	6342.71
+ 1               	2544.76         	8081.84
+ 3               	5869.57         	8081.84
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -119,9 +120,9 @@
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

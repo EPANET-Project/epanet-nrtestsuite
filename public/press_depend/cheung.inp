@@ -2,14 +2,14 @@
 PDD Example from Cheung, et al. 2005.
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  2               	90          	33.3        	                	;
  3               	88          	33.4        	                	;
  4               	90          	50.0        	                	;
  5               	85          	66.7        	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  1               	100          	                	;
 
 [TANKS]
@@ -26,7 +26,7 @@ PDD Example from Cheung, et al. 2005.
 ;ID              	Node1           	Node2           	Parameters
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
 
 [TAGS]
 
@@ -80,22 +80,21 @@ PDD Example from Cheung, et al. 2005.
 ;Tank            	Model
 
 [TIMES]
- Duration           	0:00 
- Hydraulic Timestep 	1:00 
- Quality Timestep   	0:05 
- Pattern Timestep   	1:00 
- Pattern Start      	0:00 
- Report Timestep    	1:00 
- Report Start       	0:00 
+ Duration           	0:00
+ Hydraulic Timestep 	1:00
+ Quality Timestep   	0:05
+ Pattern Timestep   	1:00
+ Pattern Start      	0:00
+ Report Timestep    	1:00
+ Report Start       	0:00
  Start ClockTime    	12 am
  Statistic          	NONE
 
 [REPORT]
- Status             	Full
- Summary            	No
- Page               	0
- Nodes                  All
- Links                  All
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
 
 [OPTIONS]
  Units              	LPS
@@ -121,11 +120,11 @@ PDD Example from Cheung, et al. 2005.
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- 2               	1346.15         	6900.45         
- 3               	3676.47         	6787.33         
- 4               	6255.66         	6809.95         
- 5               	8834.84         	6809.95         
- 1               	-1074.66        	6855.20         
+ 2               	1346.15         	6900.45
+ 3               	3676.47         	6787.33
+ 4               	6255.66         	6809.95
+ 5               	8834.84         	6809.95
+ 1               	-1074.66        	6855.20
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -134,9 +133,9 @@ PDD Example from Cheung, et al. 2005.
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

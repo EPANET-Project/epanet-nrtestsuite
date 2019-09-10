@@ -2,12 +2,12 @@
 
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  J1              	0           	0           	                	;
  J2              	0           	0           	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  R1              	50          	                	;
  R2              	50          	                	;
 
@@ -23,7 +23,7 @@
 ;ID              	Node1           	Node2           	Parameters
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
  FCV             	J1              	J2              	12          	FCV 	500         	0           	;
 
 [TAGS]
@@ -87,9 +87,10 @@
  Statistic          	None
 
 [REPORT]
- Status             	Full
- Summary            	No
- Page               	0
+Status             Yes
+Summary            No
+Nodes              None
+Links              None
 
 [OPTIONS]
  Units              	LPS
@@ -111,10 +112,10 @@
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- J1              	4404.76         	6603.17         
- J2              	5849.21         	6634.92         
- R1              	2626.98         	6634.92         
- R2              	7595.24         	6698.41         
+ J1              	4404.76         	6603.17
+ J2              	5849.21         	6634.92
+ R1              	2626.98         	6634.92
+ R2              	7595.24         	6698.41
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -123,9 +124,9 @@
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

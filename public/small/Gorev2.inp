@@ -2,12 +2,12 @@
 
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  3               	0           	3           	                	;
  4               	0           	0           	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  1               	10          	                	;
  2               	10          	                	;
 
@@ -24,7 +24,7 @@
 ;ID              	Node1           	Node2           	Parameters
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
 
 [TIMES]
  Duration           	0
@@ -38,12 +38,11 @@
  Statistic          	None
 
 [REPORT]
- Status             	Full
- Summary            	No
- Page               	0
- Nodes                  All
- Links                  All
- 
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
+
 [OPTIONS]
  Units              	LPS
  Headloss           	H-W
@@ -64,10 +63,10 @@
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- 3               	4839.49         	5826.65         
- 4               	4839.49         	3836.28         
- 1               	1821.83         	5826.65         
- 2               	7022.47         	5842.70         
+ 3               	4839.49         	5826.65
+ 4               	4839.49         	3836.28
+ 1               	1821.83         	5826.65
+ 2               	7022.47         	5842.70
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -76,9 +75,9 @@
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

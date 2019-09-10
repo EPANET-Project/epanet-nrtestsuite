@@ -36,9 +36,10 @@ UNITS  SI
 HEADLOSS  D-W
 
 [REPORT]
- Status             	Yes
- Summary            	No
- Page               	0
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
 
 
 [END]

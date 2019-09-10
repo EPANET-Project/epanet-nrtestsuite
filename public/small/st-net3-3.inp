@@ -2,7 +2,7 @@
 Network 3 (from Siew & Tanyimboh)
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  1               	150         	0           	                	;
  2               	150         	30          	                	;
  3               	100         	0           	                	;
@@ -14,7 +14,7 @@ Network 3 (from Siew & Tanyimboh)
  9               	120         	80          	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  10              	120   ;158         	                	;
  11              	200  ;238         	                	;
 
@@ -39,7 +39,7 @@ Network 3 (from Siew & Tanyimboh)
  11              	3               	4               	HEAD P11	SPEED 1	;
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
  12              	7               	8               	200         	PRV 	140         	0           	;
 
 [TAGS]
@@ -55,14 +55,14 @@ Network 3 (from Siew & Tanyimboh)
 
 [CURVES]
 ;ID              	X-Value     	Y-Value
-;PUMP: PUMP: 
- P11             	0           	33.33       
- P11             	100         	23.04       
- P11             	179.97      	0           
-;PUMP: PUMP: 
- P10             	0           	26.67       
- P10             	100         	16.25       
- P10             	159.98      	0           
+;PUMP: PUMP:
+ P11             	0           	33.33
+ P11             	100         	23.04
+ P11             	179.97      	0
+;PUMP: PUMP:
+ P10             	0           	26.67
+ P10             	100         	16.25
+ P10             	159.98      	0
 
 [CONTROLS]
 
@@ -101,20 +101,21 @@ Network 3 (from Siew & Tanyimboh)
 ;Tank            	Model
 
 [TIMES]
- Duration           	0:00 
- Hydraulic Timestep 	1:00 
- Quality Timestep   	0:05 
- Pattern Timestep   	1:00 
- Pattern Start      	0:00 
- Report Timestep    	1:00 
- Report Start       	0:00 
+ Duration           	0:00
+ Hydraulic Timestep 	1:00
+ Quality Timestep   	0:05
+ Pattern Timestep   	1:00
+ Pattern Start      	0:00
+ Report Timestep    	1:00
+ Report Start       	0:00
  Start ClockTime    	12 am
  Statistic          	NONE
 
 [REPORT]
- Status             	No
- Summary            	No
- Page               	0
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
 
 [OPTIONS]
  Units              	LPS
@@ -133,7 +134,7 @@ Network 3 (from Siew & Tanyimboh)
  Quality            	None mg/L
  Diffusivity        	1
  Tolerance          	0.01
- 
+
  ;Head Accuracy         	3.038e-4
  ;Flow Accuracy          2.832e-2
  ;Step Sizing            FULL ;LINESEARCH ;  HEURISTIC ;
@@ -143,17 +144,17 @@ Network 3 (from Siew & Tanyimboh)
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- 1               	2544.76         	7544.76         
- 2               	4207.16         	7544.76         
- 3               	6662.40         	7544.76         
- 4               	8401.53         	7544.76         
- 5               	8401.53         	4526.85         
- 6               	4207.16         	4526.85         
- 7               	9245.52         	6624.04         
- 8               	10038.36        	5703.32         
- 9               	10882.35        	4526.85         
- 10              	396.42          	7544.76         
- 11              	447.57          	4526.85         
+ 1               	2544.76         	7544.76
+ 2               	4207.16         	7544.76
+ 3               	6662.40         	7544.76
+ 4               	8401.53         	7544.76
+ 5               	8401.53         	4526.85
+ 6               	4207.16         	4526.85
+ 7               	9245.52         	6624.04
+ 8               	10038.36        	5703.32
+ 9               	10882.35        	4526.85
+ 10              	396.42          	7544.76
+ 11              	447.57          	4526.85
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -162,9 +163,9 @@ Network 3 (from Siew & Tanyimboh)
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

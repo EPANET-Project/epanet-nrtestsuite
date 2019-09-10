@@ -2,7 +2,7 @@
 GESSLER EXAMPLE PROBLEM 4-9
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  2               	4500        	0           	                	;
  3               	4500        	100         	                	;
  4               	4500        	0           	                	;
@@ -16,7 +16,7 @@ GESSLER EXAMPLE PROBLEM 4-9
  12              	4500        	950         	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  1               	5000        	                	;
 
 [TANKS]
@@ -40,7 +40,7 @@ GESSLER EXAMPLE PROBLEM 4-9
 ;ID              	Node1           	Node2           	Parameters
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
  12              	5               	6               	6           	PRV 	100         	0.01        	;10
  13              	7               	8               	6           	PRV 	100         	0.01        	;10
  14              	9               	10              	6           	PRV 	100         	0.01        	;10
@@ -105,9 +105,10 @@ GESSLER EXAMPLE PROBLEM 4-9
  Statistic          	None
 
 [REPORT]
- Status             	Full
- Summary            	No
- Page               	0
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
 
 [OPTIONS]
  Units              	GPM
@@ -137,9 +138,9 @@ GESSLER EXAMPLE PROBLEM 4-9
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

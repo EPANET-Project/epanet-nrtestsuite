@@ -2,14 +2,14 @@
 
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  2               	99          	10          	                	;
  3               	98          	20          	                	;
  4               	97          	30          	                	;
  5               	96          	40          	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  1               	100         	                	;
 
 [TANKS]
@@ -29,7 +29,7 @@
 ;ID              	Node1           	Node2           	Parameters
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
 
 [TAGS]
 
@@ -91,9 +91,10 @@
  Statistic          	None
 
 [REPORT]
- Status             	Full
- Summary            	No
- Page               	0
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
 
 [OPTIONS]
  Units              	LPS
@@ -115,11 +116,11 @@
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- 2               	2876.25         	6505.02         
- 3               	6571.91         	6672.24         
- 4               	3026.76         	4565.22         
- 5               	6638.80         	4765.89         
- 1               	4866.22         	7625.42         
+ 2               	2876.25         	6505.02
+ 3               	6571.91         	6672.24
+ 4               	3026.76         	4565.22
+ 5               	6638.80         	4765.89
+ 1               	4866.22         	7625.42
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -128,9 +129,9 @@
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

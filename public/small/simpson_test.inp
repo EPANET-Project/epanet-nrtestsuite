@@ -2,14 +2,14 @@
 
 
 [JUNCTIONS]
-;ID              	Elev        	Demand      	Pattern         
+;ID              	Elev        	Demand      	Pattern
  2               	0           	0           	                	;
  3               	0           	0           	                	;
  4               	0           	0           	                	;
  5               	0           	0           	                	;
 
 [RESERVOIRS]
-;ID              	Head        	Pattern         
+;ID              	Head        	Pattern
  1               	60          	                	;
  6               	30          	                	;
 
@@ -26,7 +26,7 @@
 ;ID              	Node1           	Node2           	Parameters
 
 [VALVES]
-;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss
  4               	2               	3               	500         	FCV 	2000        	0           	;
  5               	4               	5               	500          	PRV 	20.          	0           	;
 
@@ -92,9 +92,10 @@
  Statistic          	None
 
 [REPORT]
- Status             	Full
- Summary            	No
- Page               	0
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
 
 [OPTIONS]
  Units              	LPS
@@ -116,12 +117,12 @@
 
 [COORDINATES]
 ;Node            	X-Coord         	Y-Coord
- 2               	3134.92         	7380.95         
- 3               	4357.14         	7333.33         
- 4               	6452.38         	7349.21         
- 5               	7468.25         	7317.46         
- 1               	1214.29         	7365.08         
- 6               	8738.10         	7301.59         
+ 2               	3134.92         	7380.95
+ 3               	4357.14         	7333.33
+ 4               	6452.38         	7349.21
+ 5               	7468.25         	7317.46
+ 1               	1214.29         	7365.08
+ 6               	8738.10         	7301.59
 
 [VERTICES]
 ;Link            	X-Coord         	Y-Coord
@@ -130,9 +131,9 @@
 ;X-Coord           Y-Coord          Label & Anchor Node
 
 [BACKDROP]
- DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00
  UNITS          	None
- FILE           	
- OFFSET         	0.00            	0.00            
+ FILE
+ OFFSET         	0.00            	0.00
 
 [END]

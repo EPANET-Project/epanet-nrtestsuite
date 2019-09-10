@@ -91,9 +91,10 @@ system changes over time.
  Statistic          	None
 
 [REPORT]
- Status             	Yes
- Summary            	No
- Page               	0
+ Status             Yes
+ Summary            No
+ Nodes              None
+ Links              None
 
 [OPTIONS]
  Units              	GPM
