@@ -29,9 +29,9 @@
 
   3. Generate new test artifacts.
 
-  4. Add new test artifacts to the benchmark archive.
+  4. Create a benchmark archive containing the new test artifacts.
 
-  5. Update the release with the new benchmark archive.
+  5. Create a new release with the new benchmark archive.
 
 
 ### Updating Rolling Benchmark
