@@ -11,6 +11,15 @@
 ## Regression Testing SOPs
 
 
+### General Observations
+
+ - Test file names containing spaces are currently not supported. Substitute
+   a dash "-" or an underscore "\_" instead.
+
+ - Comparing report files can be problematic. To help, minimize false test
+   failures use the following settings in the test case [REPORT] section.
+
+
 **Recommended setting for [REPORTS] section when adding new tests**
 ```
 [REPORT]
@@ -23,15 +32,18 @@
 
 ### Adding Tests
 
-  1. Create a test configuration json file using test-config script.
+  1. Create a test configuration json file using `test-config` script.
 
-  2. Add the input and configuration files to the repo.
+  2. Add the new input and configuration files to the test repo.
 
-  3. Generate new test artifacts.
+  3. Run nrtest to generate new test artifacts.
 
   4. Create a benchmark archive containing the new test artifacts.
 
-  5. Create a new release with the new benchmark archive.
+  5. Create a new release and attach the new benchmark archive.
+
+  6. Trigger a build on the CI server and check that the new tests are running
+     properly.
 
 
 ### Updating Rolling Benchmark

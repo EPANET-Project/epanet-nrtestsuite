@@ -3,16 +3,17 @@
 #
 #  app-config.sh - Generates nrtest app configuration file for test executable
 #
-#  Date Created: 10/16/2017
+#  Date Created: 3/19/2018
 #
 #  Author:       Michael E. Tryby
 #                US EPA - ORD/NRMRL
 #
 #  Arguments:
 #    1 - absolute path to test executable
-#    2 - platform
-#    3 - SUT build id
-#    4 - SUT version id
+#
+#  NOT IMPLEMENTED YET
+#    2 - test executable version number
+#    3 - build description
 #
 
 unameOut="$(uname -s)"
@@ -31,11 +32,14 @@ case "${unameOut}" in
     *)          # Machine unknown
 esac
 
+version=""
+build_description=""
+
 cat<<EOF
 {
     "name" : "epanet",
-    "version" : "$4",
-    "description" : "$2 $3",
+    "version" : "${version}",
+    "description" : "${build_description}",
     "setup_script" : "",
     "exe" : "${abs_build_path}/${test_cmd}"
 }

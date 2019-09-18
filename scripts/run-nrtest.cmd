@@ -11,24 +11,39 @@
 ::    python -m pip install -r requirements.txt
 ::
 ::  Environment Variables:
-::    TEST_HOME
-::    BUILD_HOME
+::    BUILD_HOME - relative path
+::    TEST_HOME  - relative path
 ::    PLATFORM
+::    REF_BUILD_ID
 ::
 ::  Arguments:
-::    1 - (SUT_VERSION)
-::    2 - (SUT_BUILD_ID)
+::    1 - (SUT_VERSION)  - optional argument
+::    2 - (SUT_BUILD_ID) - optional argument
 ::
 
-@echo off
+::@echo off
 setlocal EnableDelayedExpansion
 
+
+:: Check that required environment variables are set
+if not defined BUILD_HOME ( echo "ERROR: BUILD_HOME must be defined" & exit /B 1 )
+if not defined TEST_HOME ( echo "ERROR: TEST_HOME must be defined" & exit /B 1 )
+if not defined PLATFORM ( echo "ERROR: PLATFORM must be defined" & exit /B 1 )
+if not defined REF_BUILD_ID ( echo "ERROR: REF_BUILD_ID must be defined" & exit /B 1 )
+
+
+:: determine project directory
 set "SCRIPT_HOME=%~dp0"
+cd %SCRIPT_HOME%
+pushd ..
+set PROJ_DIR=%CD%
+popd
 
-:: Check existence
-if not defined REF_BUILD_ID (echo "ERROR: REF_BUILD_ID must be defined" & exit /B 1)
 
-if [%1]==[] (set SUT_VERSION=
+cd %PROJ_DIR%\%TEST_HOME%
+
+:: Process optional arguments
+if [%1]==[] (set "SUT_VERSION=unknown"
 ) else ( set "SUT_VERSION=%~1" )
 
 if [%2]==[] ( set "SUT_BUILD_ID=local"
@@ -36,33 +51,23 @@ if [%2]==[] ( set "SUT_BUILD_ID=local"
 
 
 :: check if app config file exists
-if not exist "apps\epanet-%SUT_BUILD_ID%.json" do (
-  :: determine SUT executable path
-  for /D /R "%BUILD_HOME%" %%a in (*) do (
-    if /i "%%~nxa"=="bin" (
-      set "BIN_HOME=%%a"
-      goto break_loop_2
-    )
-  )
-  :break_loop_2
-  set "SUT_PATH=%BIN_HOME%\Release"
-
-  :: TODO: determine SUT_VERSION here by calling runepanet.exe
-
-  :: call app config script
+if not exist apps\epanet-%SUT_BUILD_ID%.json (
   mkdir apps
-  call %SCRIPT_HOME%\app-config.cmd %SUT_PATH% %PLATFORM% %SUT_BUILD_ID% %SUT_VERSION%^
-     > apps\epanet-%SUT_BUILD_ID%.json
+  call %SCRIPT_HOME%\app-config.cmd %PROJ_DIR%\%BUILD_HOME%\bin\Release^
+    %PLATFORM% %SUT_BUILD_ID% %SUT_VERSION% > apps\epanet-%SUT_BUILD_ID%.json
 )
 
 
-:: build test list
+:: recursively build test list
 set TESTS=
-for /F "tokens=*" %%T in ('dir /b tests') do ( set "TESTS=!TESTS! tests\%%T" )
+for /F "tokens=*" %%T in ('dir /b /s /a:d tests') do (
+  set FULL_PATH=%%T
+  set TESTS=!TESTS! !FULL_PATH:*nrtestsuite\=!
+)
 
 
 :: determine location of python Scripts folder
-for /F "tokens=*" %%G in ('where python') do (
+for /F "tokens=*" %%G in ('where python.exe') do (
   set PYTHON_DIR=%%~dpG
   goto break_loop_1
 )
@@ -71,18 +76,18 @@ set "NRTEST_SCRIPT_PATH=%PYTHON_DIR%Scripts"
 
 
 :: build nrtest execute command
-set NRTEST_EXECUTE_CMD=python %NRTEST_SCRIPT_PATH%\nrtest execute
+set NRTEST_EXECUTE_CMD=python.exe %NRTEST_SCRIPT_PATH%\nrtest execute
 set TEST_APP_PATH=apps\epanet-%SUT_BUILD_ID%.json
 set TEST_OUTPUT_PATH=benchmark\epanet-%SUT_BUILD_ID%
 
 :: build nrtest compare command
-set NRTEST_COMPARE_CMD=python %NRTEST_SCRIPT_PATH%\nrtest compare
-set REF_OUTPUT_PATH=benchmark\epanet-ref
+set NRTEST_COMPARE_CMD=python.exe %NRTEST_SCRIPT_PATH%\nrtest compare
+set REF_OUTPUT_PATH=benchmark\epanet-%REF_BUILD_ID%
 set RTOL_VALUE=0.01
 set ATOL_VALUE=0.0
 
 :: change current directory to test suite
-cd %TEST_HOME%
+::cd %TEST_HOME%
 
 :: if present clean test benchmark results
 if exist %TEST_OUTPUT_PATH% (
