@@ -4,6 +4,6 @@
 </p> 
 
 
-# epanet-nrtests
+# epanet-nrtestsuite
 
-epanet numerical regression tests
+epanet numerical regression test suite
